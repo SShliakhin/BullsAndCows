@@ -199,7 +199,6 @@ class MainViewController: UITableViewController {
         case .attempts:
             return tries.count
         case .congratulation:
-            //return 1
             return currentGame.isRightGuess ? 1 : 0
         }
     }
@@ -221,7 +220,6 @@ class MainViewController: UITableViewController {
         case .congratulation:
             if currentGame.isRightGuess {
                 
-                //let quote = "Haters gonna hate"
                 let font = UIFont.systemFont(ofSize: 20, weight: UIFont.Weight(rawValue: 0.6))
                 let paragraphStyle = NSMutableParagraphStyle()
                 paragraphStyle.alignment = NSTextAlignment.center
@@ -233,8 +231,6 @@ class MainViewController: UITableViewController {
                 ]
                 
                 let attributedString = NSAttributedString(string: "Good job!!!", attributes: attributes)
-                
-                //cell.textLabel?.text = "Good job!!!"
                 cell.textLabel?.attributedText = attributedString
             }
         }
